@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+<script>
+    const searchProduct = () => {
+    const searchInputValue = document.getElementById("product_search").value;
+    window.location.href = `/pages/search/${searchInputValue}`;
+}
+</script>
+
+<div class="flex justify-between flex-col items-center"> 
+    <div class="flex my-3 gap-5">
+        <input id="product_search" type="text" placeholder="Название" class="text-xl">
+        <button onclick="searchProduct()" class="border-2 rounded-3xl bg-gray-300 p-3">Поиск</button>
+    </div>
+    <span>For example: adidas, nike air</span>
+    {% for product in products %}
+        <div class="flex rounded-3 border-2 p-3 mt-5">
+            <img src="{{ url_for('static', path='adidas.jpeg') }}" alt="foto" width="200" class="mr-5">
+            <div class="flex flex-col">
+               <span class="text-2xl font-bold">{{ product.name }}</span>
+               <span class="text-lg">{{ product.price }}</span>
+               <span class="text-lg">{{ product.description }}</span>
+            </div>
+       </div>
+    {% endfor %}
+</div>
+{% endblock %}

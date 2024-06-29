@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+{% block contend %}
+{% for product in products %}
+<div class="container">
+    <img src="{{url_for('static', path='adidas.jpeg')}}" alt="sneakers">
+    <div class="flex">
+        <span class="heading-text">{{ product.name }}</span>
+        <span class="text-lg">{{ product.description }}</span>
+        <span class="text-lg">{{ product.price }}</span>
+
+    </div>
+
+</div>
+{% endfor %}
+{% endblock %}

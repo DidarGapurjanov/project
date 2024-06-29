@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-lg {
+    margin-bottom: 5px;
+}

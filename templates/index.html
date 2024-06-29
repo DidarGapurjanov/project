@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanGizmo</title>
+    <style>
+        /* Стили для страницы */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-right: 5px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .products {
+            display: inline-block;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+         img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Верхняя часть страницы -->
+    <header>
+        <h1>UrbanGizmo</h1>
+        <!-- Вставьте логотип здесь -->
+        <img src="/static/logo.jpg" alt="Логотип Тур-Магазина">
+    </header>
+    <!-- Меню навигации -->
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/products">Товары</a>
+        <a href="/contacts">Контакты</a>
+        <a href="/register">Регистрация</a>
+        <a href="/login">Войти</a>
+        <a href="/about">О нас</a>
+    </nav>
+    <div id="contend">
+        {% block contend %}{% endblock %}
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>Телефон: +7 930 919 3368 | Email: urbangizmosupport@mail.ru</p>
+        <p>© 2024 UrbanGizmo</p>
+    </footer>
+</body>
+</html>
